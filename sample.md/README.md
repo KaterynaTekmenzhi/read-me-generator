@@ -1,7 +1,7 @@
-# Example
+# example
 
   ## Description
-  Example
+  example
 
   ## Table of Contents
   * [Installation](#installation)
@@ -13,22 +13,22 @@
   * [License](#license)
   
   ## Installation
-  Example
+  example
 
   ## Usage
-  Example
+  example
 
   ## Author
-  Example
+  example
 
   ## Contribution
-  Example
+  example
 
   ## Tests
-  Example
+  example
 
   ## Username
-  Example
+  example
 
   ## License
   * [License](#license)
