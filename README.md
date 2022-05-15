@@ -1,37 +1,27 @@
-# Example
+# Professional README Generator
 
   ## Description
-  Example
+  This application provides project creators a quick and professional way to create a README file. This process is beneficial for time management and efficiency 
 
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Author](#author)
-  * [Contribution](#contribution)
-  * [Tests](#tests)
-  * [Username](#username)
   * [License](#license)
   
   ## Installation
-  Example
+  To install the dependencies (Inquirer package), run `npm install` in your command line. 
+  Use the command `node index.js` in a terminal.
 
   ## Usage
-  Example
+  ![usage](./screenshots/usage.png)
+
+  See video for a *[walkthrough](https://drive.google.com/file/d/1Me5aPrKBqN6-UT8CuIdk-vPLw7CIFuLN/preview)
 
   ## Author
-  Example
 
-  ## Contribution
-  Example
+  My file repository in GitHub is [here](https://github.com/KaterynaTekmenzhi/read-me-generator)
 
-  ## Tests
-  Example
-
-  ## Username
-  Example
-
-  ## License
-  * [License](#license)
   ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
