@@ -1,19 +1,14 @@
 {
-  "name": "read-me-generator",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "## Your Task",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KaterynaTekmenzhi/read-me-generator.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KaterynaTekmenzhi/read-me-generator/issues"
-  },
-  "homepage": "https://github.com/KaterynaTekmenzhi/read-me-generator#readme"
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }
