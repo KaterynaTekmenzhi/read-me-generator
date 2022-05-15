@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Creating a function that returns a license badge based on which license is passed in
+// If there is no license, returning an empty string
 const generateLicense = (license)  => {
   const lic = [
     {
@@ -26,6 +26,7 @@ const generateLicense = (license)  => {
       name: 'Eclipse',
       badge: `[![License: EPL 1.0](https://img.shields.io/badge/License-EPL%201.0-yellow.svg)](https://opensource.org/licenses/EPL-1.0)`,
     },
+    // adding a default option for no license
     {
       name: 'none',
       badge: '',
@@ -41,8 +42,8 @@ const generateLicense = (license)  => {
 
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Creating a function that returns the license link
+// If there is no license, returns an empty string
 function generateLicenseLink(license) {
   if (license === 'none') {
     return ""
@@ -51,8 +52,8 @@ function generateLicenseLink(license) {
   }
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Creating a function that returns the license section of README
+// If there is no license, returns an empty string
 function generateLicenseSection(license) {
   if (license === 'none') {
     return ""
@@ -65,7 +66,7 @@ ${generateLicense(license)}
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Creating a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -104,5 +105,5 @@ function generateMarkdown(data) {
   ${generateLicenseSection(data.license)}
 `};
 
-
+// exporting the generateMarkdown function
 module.exports = generateMarkdown;
