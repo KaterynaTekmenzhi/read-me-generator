@@ -27,8 +27,13 @@ const generateLicense = (license)  => {
       badge: `[![License: EPL 1.0](https://img.shields.io/badge/License-EPL%201.0-yellow.svg)](https://opensource.org/licenses/EPL-1.0)`,
     }
   ]
-  let licenseBadge = lic.find(license => license.name === license)
-  return licenseBadge.badge
+  let licenseBadge = ``;
+  lic.forEach(licname => {
+    if (licname.name === license) {
+      licenseBadge = licname.badge;
+    }
+  })
+  return `${licenseBadge}`;
 
 };
 
