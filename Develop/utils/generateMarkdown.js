@@ -25,6 +25,10 @@ const generateLicense = (license)  => {
     {
       name: 'Eclipse',
       badge: `[![License: EPL 1.0](https://img.shields.io/badge/License-EPL%201.0-yellow.svg)](https://opensource.org/licenses/EPL-1.0)`,
+    },
+    {
+      name: 'none',
+      badge: '',
     }
   ]
   let licenseBadge = ``;
@@ -71,21 +75,17 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [License](#license)
   * [Author](#author)
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [Username](#username)
+  * [License](#license)
   
   ## Installation
   ${data.installation}
 
   ## Usage
   ${data.usage}
-
-  ## License
-  ${generateLicenseLink(data.license)}
-  ${generateLicenseSection(data.license)}
 
   ## Author
   ${data.author}
@@ -98,7 +98,11 @@ function generateMarkdown(data) {
 
   ## Username
   ${data.username}
-`;
-}
+
+  ## License
+  ${generateLicenseLink(data.license)}
+  ${generateLicenseSection(data.license)}
+`};
+
 
 module.exports = generateMarkdown;

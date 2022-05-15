@@ -1,7 +1,9 @@
 // Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+// function to generate markdown
 const generateMarkdown= require("./Develop/utils/generateMarkdown");
+
 
 // Create an array of questions for user input
 const questions = () => {
@@ -28,11 +30,6 @@ const questions = () => {
         },
         {
             type: 'input',
-            message: 'What is the application license?',
-            name: 'license'
-        },
-        {
-            type: 'input',
             message: 'Who is the application author?',
             name: 'author'
         },
@@ -51,14 +48,29 @@ const questions = () => {
             message: 'What is your Github username?',
             name: 'username'
         },
-    ]);
+        {
+            type: 'list',
+            message: 'What is the application license?',
+            name: 'license',
+            choices: ['Apache', 'BSD', 'MIT', 'Mozilla', 'Eclipse'],
+            default: 'MIT'
+        }
+    ])
+    .then((answers) => {
+        console.log(answers);
+        return answers;
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 };
 
 // initialize promise 
 const init = () => {
     questions()
-      .then((answers) => fs.writeFileSync('index.html', generateMarkdown(answers)))
-      .then(() => console.log('Successfully wrote to index.html'))
+    // generating a markdown file called README.md and sending the data to the generateMarkdown function
+      .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+      .then(() => console.log('Successfully wrote to README.md'))
       .catch((err) => console.error(err));
   };
 
