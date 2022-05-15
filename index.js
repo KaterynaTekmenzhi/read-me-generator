@@ -49,27 +49,14 @@ const questions = () => {
         {
             type: 'input',
             message: 'What is your Github username?',
-            name: 'github'
+            name: 'username'
         },
     ]);
 };
 
-// // TODO: Create a function to initialize app
-// function init() {
-//     inquirer.prompt(questions).then(function(response) {
-//         const data = generateMarkdown(response);
-//         fs.writeFile('./Develop/utils/README.md', data, function(err) {
-//             if (err) {
-//                 return console.log(err);
-//             }
-//             console.log('Success!');
-//         });
-//     });
-// };
-
+// initialize promise 
 const init = () => {
     questions()
-      // Use writeFileSync method to use promises instead of a callback function
       .then((answers) => fs.writeFileSync('index.html', generateMarkdown(answers)))
       .then(() => console.log('Successfully wrote to index.html'))
       .catch((err) => console.error(err));
